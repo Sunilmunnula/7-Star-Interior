@@ -1,0 +1,67 @@
+// Initial setup for the 7 Star Interior App
+
+// Backend: Node.js with Express
+// Frontend: React Native
+// Database: PostgreSQL
+// Payment Gateway: Stripe
+// Notifications: Firebase Cloud Messaging
+
+// Folder Structure:
+// /7star-app
+//    /backend
+//    /frontend
+
+// Step 1: Backend - Node.js + Express
+
+// server.js
+const express = require('express');
+const cors = require('cors');
+const dotenv = require('dotenv');
+const bodyParser = require('body-parser');
+const morgan = require('morgan');
+const { Pool } = require('pg');
+
+dotenv.config();
+
+const app = express();
+const PORT = process.env.PORT || 5000;
+
+// Database Connection
+const pool = new Pool({
+  user: process.env.DB_USER,
+  host: process.env.DB_HOST,
+  database: process.env.DB_NAME,
+  password: process.env.DB_PASSWORD,
+  port: process.env.DB_PORT
+});
+
+app.use(cors());
+app.use(bodyParser.json());
+app.use(morgan('dev'));
+
+// Test Route
+app.get('/', (req, res) => {
+  res.send('7 Star Interior Backend Running');
+});
+
+// Start Server
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
+
+// Step 2: Frontend - React Native
+// Initial setup with screens for Authentication, Projects, Estimates, Payments, Messages
+
+// Step 3: Database - PostgreSQL
+// Schema Setup for Users, Projects, Estimates, Payments, Messages
+
+// Step 4: Payment Integration - Stripe
+// Install Stripe SDK and configure endpoints
+
+// Step 5: Notifications - Firebase Cloud Messaging
+// Setup Firebase Admin and client integration
+
+// Step 6: Deployment - AWS EC2, S3, RDS
+// Configuration and deployment scripts
+
+// Continue development in modular structure
