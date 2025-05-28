@@ -1,0 +1,22 @@
+
+name: seven_star_ai
+description: 7 Star Interior – Voice Guided Compass Vastu App
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.17.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  flutter_compass: ^0.7.0
+  speech_to_text: ^5.8.0
+  http: ^0.13.3
+  provider: ^6.0.3
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/icons/

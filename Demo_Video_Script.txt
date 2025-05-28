@@ -1,0 +1,7 @@
+
+Scene 1: Logo animation
+Scene 2: User selects room type (kitchen)
+Scene 3: Compass rotates, shows real-time guidance
+Scene 4: 3D view updates layout
+Scene 5: Export layout
+Scene 6: CTA - "Design with Direction – Download Now"
